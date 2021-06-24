@@ -27,4 +27,10 @@ node {
             app.push("latest")
         }
     }
+     stage('Deploy container') {
+    
+    steps{
+            sh 'docker run -dit balasanisai/dockerr:latest'
+       }
+   }
 }
